@@ -8,6 +8,7 @@ import { combineReducers, createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
 import productsReducer from './reducers/products-reducer'
 import userReducer from './reducers/user-reducer'
+import dataService from "./middlewares/dataService";
 
 const allReducers = combineReducers({
     products: productsReducer,
@@ -20,7 +21,7 @@ const initial_state = {
 };
 
 const allStoreEnhancers = compose(
-    applyMiddleware(),
+    applyMiddleware(dataService),
     window.devToolsExtension && window.devToolsExtension()
 );
 
