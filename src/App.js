@@ -18,7 +18,7 @@ class App extends Component {
     }
 
     render() {
-        // console.log(this.props);
+         console.log(this.props);
         return (
             <div className="App">
                 <header className="App-header">
@@ -52,7 +52,6 @@ const mapStateToProps = (state, props) => {
 //it can be either an object or a function
 //if we use it as a function we need to explicitly bind dispatch to the actions
 const mapActionsToProps = (dispatch, props) => {
-    console.log(props);
 
     return bindActionCreators({
         // the "on" prefix is to prevent variable collisions
@@ -60,9 +59,18 @@ const mapActionsToProps = (dispatch, props) => {
 
     }, dispatch)
 }
+//propsFromState is basically whatever we return from mapStateToProps
+//propsFromDispatch the same but from mapActionToProps
+//ownProps are the passed in props
+const mergeProps = (propsFromState, propsFromDispatch, ownProps) => {
+    //console.log(propsFromState,propsFromDispatch,ownProps);
+    
+    return { test:'mergeProps'};
+}
+
 //connect takes 3 arguments
 
 // 1. the state's specified fields that are going to be injected to the component
 // 2. the actions that are going to be injected
-// 3.
-export default connect(mapStateToProps, mapActionsToProps)(App);
+// 3. merge props
+export default connect(mapStateToProps, mapActionsToProps, mergeProps)(App);
