@@ -26,7 +26,11 @@ const initial_state = {
 };
 
 // creating the store with the reducer injected,
-const store = createStore(allReducers, initial_state);
+const store = createStore(allReducers,
+    initial_state,
+    window.devToolsExtension && window.
+    devToolsExtension()
+);
 
 console.log(store.getState());
 
