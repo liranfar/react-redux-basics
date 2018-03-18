@@ -20,11 +20,15 @@ const allReducers = combineReducers({
     user: userReducer
 });
 
-// creating the store with the reducer injected
-const store = createStore(allReducers);
+const initial_state = {
+    products: [{name: 'iPhone'}],
+    user: 'Liran'
+};
+
+// creating the store with the reducer injected,
+const store = createStore(allReducers, initial_state);
 
 console.log(store.getState());
-
 
 
 ReactDOM.render(<App />, document.getElementById('root'));
