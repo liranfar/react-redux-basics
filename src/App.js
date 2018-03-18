@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import {connect} from 'react-redux' //connects the app to the redux store
-import {updateUser, apiRequest} from "./actions/user-actions"
+import {updateUser, getRandomUserApi} from "./actions/user-actions"
 
 class App extends Component {
     constructor(props) {
@@ -13,8 +13,9 @@ class App extends Component {
     }
 
     componentDidMount() {
-        // setTimeout
+        setTimeout(() => {
         this.props.onApiRequest();
+        }, 1500)
     }
 
     onUpdateUser(event) {
@@ -56,7 +57,7 @@ const mapStateToProps = (state, props) => {
 const mapActionsToProps = {
     // the "on" prefix is to prevent variable collisions
     onUpdateUser: updateUser,
-    onApiRequest: apiRequest
+    onApiRequest: getRandomUserApi
 }
 
 //connect takes 3 arguments

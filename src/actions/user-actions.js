@@ -34,7 +34,7 @@ export function showErrorUser(error) {
     }
 }
 
-export function apiRequest() {
+export function getRandomUserApi() {
     return {
         type: GET_RANDOM_USER_API,
         payload: {
@@ -43,11 +43,9 @@ export function apiRequest() {
                 dataType: 'json'
             },
             onSuccess: function (response) {
-                console.log('SUCCESS', response);
                 return showUserDetails(response.data)
             },
             onFailure: function (error) {
-                console.log('ERROR', error);
                 return showErrorUser(error)
             }
         }
