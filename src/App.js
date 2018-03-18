@@ -4,6 +4,7 @@ import './App.css';
 
 import {connect} from 'react-redux' //connects the app to the redux store
 import {updateUser} from "./actions/user-actions"
+import {bindActionCreators} from 'redux'
 
 class App extends Component {
     constructor(props) {
@@ -17,7 +18,7 @@ class App extends Component {
     }
 
     render() {
-        console.log(this.props);
+        // console.log(this.props);
         return (
             <div className="App">
                 <header className="App-header">
@@ -48,10 +49,16 @@ const mapStateToProps = (state, props) => {
 
     }
 };
+//it can be either an object or a function
+//if we use it as a function we need to explicitly bind dispatch to the actions
+const mapActionsToProps = (dispatch, props) => {
+    console.log(props);
 
-const mapActionsToProps = {
-    // the "on" prefix is to prevent variable collisions
-    onUpdateUser: updateUser
+    return bindActionCreators({
+        // the "on" prefix is to prevent variable collisions
+        onUpdateUser: updateUser
+
+    }, dispatch)
 }
 //connect takes 3 arguments
 
