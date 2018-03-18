@@ -4,7 +4,6 @@ import './App.css';
 
 import {connect} from 'react-redux' //connects the app to the redux store
 import {updateUser} from "./actions/user-actions"
-import {bindActionCreators} from 'redux'
 
 class App extends Component {
     constructor(props) {
@@ -27,13 +26,12 @@ class App extends Component {
                 <p className="App-intro">
                     To get started, edit <code>src/App.js</code> and save to reload.
                 </p>
-                <input onChange={this.onUpdateUser} />
+                <input onChange={this.onUpdateUser}/>
                 {this.props.user}
             </div>
         );
     }
 }
-
 
 
 // arguments:
@@ -50,21 +48,9 @@ const mapStateToProps = (state, props) => {
 };
 //it can be either an object or a function
 //if we use it as a function we need to explicitly bind dispatch to the actions
-const mapActionsToProps = (dispatch, props) => {
-
-    return bindActionCreators({
-        // the "on" prefix is to prevent variable collisions
-        onUpdateUser: updateUser
-
-    }, dispatch)
-}
-//propsFromState is basically whatever we return from mapStateToProps
-//propsFromDispatch the same but from mapActionToProps
-//ownProps are the passed in props
-const mergeProps = (propsFromState, propsFromDispatch, ownProps) => {
-    //console.log(propsFromState,propsFromDispatch,ownProps);
-    
-    return { test:'mergeProps'};
+const mapActionsToProps = {
+    // the "on" prefix is to prevent variable collisions
+    onUpdateUser: updateUser
 }
 
 //connect takes 3 arguments
@@ -72,4 +58,4 @@ const mergeProps = (propsFromState, propsFromDispatch, ownProps) => {
 // 1. the state's specified fields that are going to be injected to the component
 // 2. the actions that are going to be injected
 // 3. merge props
-export default connect(mapStateToProps, mapActionsToProps, mergeProps)(App);
+export default connect(mapStateToProps, mapActionsToProps)(App);

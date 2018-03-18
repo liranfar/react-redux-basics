@@ -20,7 +20,7 @@ const initial_state = {
 };
 
 const allStoreEnhancers = compose(
-    // applyMiddleware(),
+    applyMiddleware(),
     window.devToolsExtension && window.devToolsExtension()
 );
 
