@@ -4,18 +4,13 @@ import './App.css';
 
 import {connect} from 'react-redux' //connects the app to the redux store
 import {updateUser, getRandomUserApi} from "./actions/user-actions"
+import { createSelector } from 'reselect'
 
 class App extends Component {
     constructor(props) {
         super(props);
 
         this.onUpdateUser = this.onUpdateUser.bind(this);
-    }
-
-    componentDidMount() {
-        setTimeout(() => {
-        this.props.onApiRequest();
-        }, 1500)
     }
 
     onUpdateUser(event) {
@@ -39,11 +34,30 @@ class App extends Component {
     }
 }
 
+const productSelector = createSelector(
+  state => state.products,
+  products => products
+);
+const userSelector = createSelector(
+  state => state.user,
+  user => user
+);
 
 // arguments:
 // the store's state
 // the props injected to the component from parent i.e <App prop1=value.. />
-const mapStateToProps = (state, props) => {
+const mapStateToProps =  createSelector(
+    productSelector,
+    userSelector,
+    (products, user) => ({
+        products,
+        user
+    })
+);
+
+
+
+/*(state, props) => {
 
     return {
         products: state.products,
@@ -51,7 +65,7 @@ const mapStateToProps = (state, props) => {
         userPlusProp: `${state.user} ${props.aRandomProps}`
 
     }
-};
+};*/
 //it can be either an object or a function
 //if we use it as a function we need to explicitly bind dispatch to the actions
 const mapActionsToProps = {
