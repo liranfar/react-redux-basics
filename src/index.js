@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-import { combineReducers, createStore } from 'redux'
+import { combineReducers, createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
 import productsReducer from './reducers/products-reducer'
 import userReducer from './reducers/user-reducer'
@@ -19,10 +19,15 @@ const initial_state = {
     user: 'Liran'
 };
 
+const allStoreEnhancers = compose(
+    // applyMiddleware(),
+    window.devToolsExtension && window.devToolsExtension()
+);
+
 // creating the store with the reducer injected,
 const store = createStore(allReducers,
     initial_state,
-    window.devToolsExtension && window.devToolsExtension()
+    allStoreEnhancers
 );
 
 
