@@ -3,13 +3,17 @@ import logo from './logo.svg';
 import './App.css';
 
 import {connect} from 'react-redux' //connects the app to the redux store
-import {updateUser} from "./actions/user-actions"
+import {updateUser, apiRequest} from "./actions/user-actions"
 
 class App extends Component {
     constructor(props) {
         super(props);
 
         this.onUpdateUser = this.onUpdateUser.bind(this);
+    }
+
+    componentDidMount() {
+        this.props.onApiRequest();
     }
 
     onUpdateUser(event) {
@@ -50,7 +54,8 @@ const mapStateToProps = (state, props) => {
 //if we use it as a function we need to explicitly bind dispatch to the actions
 const mapActionsToProps = {
     // the "on" prefix is to prevent variable collisions
-    onUpdateUser: updateUser
+    onUpdateUser: updateUser,
+    onApiRequest: apiRequest
 }
 
 //connect takes 3 arguments
