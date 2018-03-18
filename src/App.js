@@ -17,6 +17,7 @@ class App extends Component {
     }
 
     render() {
+        console.log(this.props);
         return (
             <div className="App">
                 <header className="App-header">
@@ -39,11 +40,12 @@ class App extends Component {
 // the store's state
 // the props injected to the component from parent i.e <App prop1=value.. />
 const mapStateToProps = (state, props) => {
-    console.log(props)
 
     return {
-    products: state.products,
-    user: state.user
+        products: state.products,
+        user: state.user,
+        userPlusProp: `${state.user} ${props.aRandomProps}`
+
     }
 };
 
