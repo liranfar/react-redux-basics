@@ -15,6 +15,7 @@ a skeleton for react-redux apps with api integration.
 ## Resources
 * [React-Redux](https://redux.js.org/)
 * [Redux Tutorial - Learn React/Redux in one video](https://www.youtube.com/watch?v=OSSpVLpuVWA)
+* [Create-React-App](https://github.com/facebook/create-react-app)
 * [RandomUserApi](https://randomuser.me/)
 * [axios](https://github.com/axios/axios)
 * [Redux DevToolsExtension](https://github.com/zalmoxisus/redux-devtools-extension)
