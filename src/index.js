@@ -5,6 +5,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 import { combineReducers, createStore } from 'redux'
+import { Provider } from 'react-redux'
 
 //reducer is listening to every action that is sent
 function productsReducer(state = [], action) {
@@ -40,5 +41,10 @@ const store = createStore(allReducers,
 
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root')
+        );
 registerServiceWorker();
