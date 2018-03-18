@@ -17,7 +17,6 @@ class App extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
             <div className="App">
                 <header className="App-header">
@@ -34,20 +33,27 @@ class App extends Component {
     }
 }
 
-//connect takes 3 arguments
 
-// 1. the state's specified fields that are going to be injected to the component
-const mapStateToProps = state => ({
+
+// arguments:
+// the store's state
+// the props injected to the component from parent i.e <App prop1=value.. />
+const mapStateToProps = (state, props) => {
+    console.log(props)
+
+    return {
     products: state.products,
     user: state.user
+    }
+};
 
-});
-
-// 2. the actions that are going to be injected
 const mapActionsToProps = {
     // the "on" prefix is to prevent variable collisions
     onUpdateUser: updateUser
 }
+//connect takes 3 arguments
 
+// 1. the state's specified fields that are going to be injected to the component
+// 2. the actions that are going to be injected
 // 3.
 export default connect(mapStateToProps, mapActionsToProps)(App);

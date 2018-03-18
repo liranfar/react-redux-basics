@@ -22,15 +22,14 @@ const initial_state = {
 // creating the store with the reducer injected,
 const store = createStore(allReducers,
     initial_state,
-    window.devToolsExtension && window.
-    devToolsExtension()
+    window.devToolsExtension && window.devToolsExtension()
 );
 
 
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <App aRandomProps="whatever"/>
     </Provider>,
     document.getElementById('root')
         );
