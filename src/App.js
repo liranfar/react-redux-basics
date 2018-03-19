@@ -11,10 +11,16 @@ class App extends Component {
         super(props);
 
         this.onUpdateUser = this.onUpdateUser.bind(this);
+        this.onGenerateRandomUser = this.onGenerateRandomUser.bind(this);
     }
 
     onUpdateUser(event) {
         this.props.onUpdateUser(event.target.value)
+    }
+
+    onGenerateRandomUser(event) {
+        this.props.onGenerateRandomUser(event.target.value)
+
     }
 
     render() {
@@ -27,13 +33,19 @@ class App extends Component {
                 <p className="App-intro">
                     To get started, edit <code>src/App.js</code> and save to reload.
                 </p>
-                <input onChange={this.onUpdateUser}/>
-                {this.props.user}
+                <div className="App-form-group">
+                    <button onClick={this.onGenerateRandomUser}>Generate User!</button>
+                    <input className="App-input" onChange={this.onUpdateUser} value={this.props.user}/>
+                </div>
+                    <div className="App-form-group">Random User Api Details:</div>
+                    <div>name: {this.props.user}</div>
+
             </div>
         );
     }
 }
 
+// reselect caching optimization
 const productSelector = createSelector(
   state => state.products,
   products => products
@@ -42,10 +54,6 @@ const userSelector = createSelector(
   state => state.user,
   user => user
 );
-
-// arguments:
-// the store's state
-// the props injected to the component from parent i.e <App prop1=value.. />
 const mapStateToProps =  createSelector(
     productSelector,
     userSelector,
@@ -57,21 +65,12 @@ const mapStateToProps =  createSelector(
 
 
 
-/*(state, props) => {
-
-    return {
-        products: state.products,
-        user: state.user,
-        userPlusProp: `${state.user} ${props.aRandomProps}`
-
-    }
-};*/
 //it can be either an object or a function
 //if we use it as a function we need to explicitly bind dispatch to the actions
 const mapActionsToProps = {
     // the "on" prefix is to prevent variable collisions
     onUpdateUser: updateUser,
-    onApiRequest: getRandomUserApi
+    onGenerateRandomUser: getRandomUserApi
 }
 
 //connect takes 3 arguments
