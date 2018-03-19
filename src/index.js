@@ -17,7 +17,7 @@ const allReducers = combineReducers({
 
 const initial_state = {
     products: [{name: 'iPhone'}],
-    user: 'Liran'
+    user: []
 };
 
 const allStoreEnhancers = compose(

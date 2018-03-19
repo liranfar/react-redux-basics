@@ -4,7 +4,7 @@ import './App.css';
 
 import {connect} from 'react-redux' //connects the app to the redux store
 import {updateUser, getRandomUserApi} from "./actions/user-actions"
-import { createSelector } from 'reselect'
+import {createSelector} from 'reselect'
 
 class App extends Component {
     constructor(props) {
@@ -24,6 +24,12 @@ class App extends Component {
     }
 
     render() {
+        console.log(this.props.user)
+        const users = this.props.user.map((user) =>
+            // console.log(user);
+        <li key={user.id.value}>{user.email}</li>
+        );
+
         return (
             <div className="App">
                 <header className="App-header">
@@ -35,10 +41,13 @@ class App extends Component {
                 </p>
                 <div className="App-form-group">
                     <button onClick={this.onGenerateRandomUser}>Generate User!</button>
-                    <input className="App-input" onChange={this.onUpdateUser} value={this.props.user}/>
+                    {/*<input className="App-input" onChange={this.onUpdateUser} value={this.props.user}/>*/}
                 </div>
-                    <div className="App-form-group">Random User Api Details:</div>
-                    <div>name: {this.props.user}</div>
+                <div className="App-form-group">Random User Api Details:</div>
+                {/*<div>name: {this.props.user}</div>*/}
+                <ul>
+                {users}
+                </ul>
 
             </div>
         );
@@ -47,14 +56,14 @@ class App extends Component {
 
 // reselect caching optimization
 const productSelector = createSelector(
-  state => state.products,
-  products => products
+    state => state.products,
+    products => products
 );
 const userSelector = createSelector(
-  state => state.user,
-  user => user
+    state => state.user,
+    user => user
 );
-const mapStateToProps =  createSelector(
+const mapStateToProps = createSelector(
     productSelector,
     userSelector,
     (products, user) => ({
@@ -62,7 +71,6 @@ const mapStateToProps =  createSelector(
         user
     })
 );
-
 
 
 //it can be either an object or a function

@@ -13,12 +13,12 @@ export function updateUser(newUser) {
 export const GET_RANDOM_USER_API = 'user:getRandomUserApi';
 export const SHOW_USER_DETAILS = 'user:showUserDetails';
 export function showUserDetails(userObj) {
-    console.log(userObj);
+    // console.log(userObj);
 
     return {
         type: SHOW_USER_DETAILS,
         payload: {
-            user : userObj.results[0].name.first
+            user : userObj.results
         }
     }
 }

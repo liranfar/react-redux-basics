@@ -39,3 +39,7 @@
 .App-input {
     margin: 0 0 0 1em;
 }
+
+ul {
+    list-style-position: inside;
+}
