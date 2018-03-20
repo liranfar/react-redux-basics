@@ -17,6 +17,8 @@
 .env.production.local
 /.idea
 /diagrams
+src/style/*.css
+src/style/*.css.map
 
 npm-debug.log*
 yarn-debug.log*

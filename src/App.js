@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './style/style.css';
 
 import {connect} from 'react-redux' //connects the app to the redux store
 import {updateUser, getRandomUserApi} from "./actions/user-actions"
