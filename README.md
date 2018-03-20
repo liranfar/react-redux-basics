@@ -13,6 +13,7 @@ a skeleton for react-redux apps with api integration.
 `npm start`
 
 ## Resources
+* [React - OFFICIAL DOCS](https://reactjs.org/docs/hello-world.html)
 * [React-Redux](https://redux.js.org/)
 * [Redux Tutorial - Learn React/Redux in one video](https://www.youtube.com/watch?v=OSSpVLpuVWA)
 * [Create-React-App](https://github.com/facebook/create-react-app)
