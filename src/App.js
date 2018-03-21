@@ -5,6 +5,8 @@ import './style/style.css';
 import {connect} from 'react-redux' //connects the app to the redux store
 import {updateUser, getRandomUserApi} from "./actions/user-actions"
 import {createSelector} from 'reselect'
+import GenerateUserBtn from "./components/dumb/GenerateUserBtn";
+import {UsersInfo} from "./components/dumb/UsersInfo";
 
 class App extends Component {
     constructor(props) {
@@ -24,12 +26,6 @@ class App extends Component {
     }
 
     render() {
-        console.log(this.props.user)
-        const users = this.props.user.map((user) =>
-            // console.log(user);
-        <li key={user.id.value}>{user.email}</li>
-        );
-
         return (
             <div className="App">
                 <header className="App-header">
@@ -39,15 +35,8 @@ class App extends Component {
                 <p className="App-intro">
                     To get started, edit <code>src/App.js</code> and save to reload.
                 </p>
-                <div className="App-form-group">
-                    <button onClick={this.onGenerateRandomUser}>Generate User!</button>
-                    {/*<input className="App-input" onChange={this.onUpdateUser} value={this.props.user}/>*/}
-                </div>
-                <div className="App-form-group">Random User Api Details:</div>
-                {/*<div>name: {this.props.user}</div>*/}
-                <ul>
-                {users}
-                </ul>
+                <GenerateUserBtn onGenerateRandomUser={this.onGenerateRandomUser} />
+                <UsersInfo users={this.props.users} />
 
             </div>
         );
@@ -60,15 +49,15 @@ const productSelector = createSelector(
     products => products
 );
 const userSelector = createSelector(
-    state => state.user,
-    user => user
+    state => state.users,
+    users => users
 );
 const mapStateToProps = createSelector(
     productSelector,
     userSelector,
-    (products, user) => ({
+    (products, users) => ({
         products,
-        user
+        users
     })
 );
 

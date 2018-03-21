@@ -12,12 +12,12 @@ import dataService from "./middlewares/dataService";
 
 const allReducers = combineReducers({
     products: productsReducer,
-    user: userReducer
+    users: userReducer
 });
 
 const initial_state = {
     products: [{name: 'iPhone'}],
-    user: []
+    users: []
 };
 
 const allStoreEnhancers = compose(

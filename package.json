@@ -23,6 +23,7 @@
   "devDependencies": {
     "node-less-chokidar": "git+https://github.com/sampi/node-less-chokidar.git",
     "node-sass-chokidar": "^1.1.2",
-    "npm-run-all": "^4.1.2"
+    "npm-run-all": "^4.1.2",
+    "prop-types": "^15.6.1"
   }
 }
