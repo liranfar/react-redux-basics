@@ -37,3 +37,21 @@ export const showcase = {
 export const newsletter = {
             header: "Subscribe to my Newsletter",
         };
+
+export const boxes = [
+    {
+        title: "HTML5 Markup",
+        body:  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia accumsan erat, a vestibulum velit volutpat ut.",
+        img:   "img/logo_html.png"
+    },
+    {
+        title: "CSS3 Styling",
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia accumsan erat, a vestibulum velit volutpat ut.",
+        img:  "img/logo_css.png"
+    },
+    {
+        title: "React Redux",
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia accumsan erat, a vestibulum velit volutpat ut.",
+        img:  "img/logo_react_redux.png",
+    }
+]
