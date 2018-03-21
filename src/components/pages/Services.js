@@ -1,11 +1,22 @@
-import React,{ Component } from 'react';
-import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import {headerServices} from "../../data/mock";
+import Header from "../common/Header";
+import Footer from "../common/Footer";
 
 class Services extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <div>
-
+                <Header
+                    selected="Services"
+                    pages={headerServices.pages}
+                    companyName={headerServices.companyName}
+                    lineOfBusiness={headerServices.lineOfBusiness}
+                />
+                {/*<Showcase header={showcase.header} body={showcase.body}/>*/}
+                {/*<Newsletter header={newsletter.header}/>*/}
+                {/*<Boxes boxes={boxes}/>*/}
+                <Footer companyName={headerServices.companyName} lineOfBusiness={headerServices.lineOfBusiness}/>
             </div>
         );
     }

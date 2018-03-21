@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class Boxes extends Component {
     render() {
         const boxes = this.props.boxes.map((box, index) => {
-            return <div className="box">
+            return <div key={index} className="box">
                 <img src={box.img}/>
                 <h3>{box.title}</h3>
                 <p>

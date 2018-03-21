@@ -13,8 +13,8 @@ class Brand extends Component {
 }
 
 Brand.propTypes = {
-    companyName: PropTypes.array.isRequired,
-    lineOfBusiness: PropTypes.array.isRequired
+    companyName: PropTypes.string.isRequired,
+    lineOfBusiness: PropTypes.string.isRequired
 };
 Brand.defaultProps = {};
 

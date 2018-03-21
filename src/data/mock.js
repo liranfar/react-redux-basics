@@ -1,27 +1,109 @@
-export const header = {
-            companyName: "Liran Farage",
-            lineOfBusiness: "Web Developer",
-            pages: [
-                {
-                    name: 'Home',
-                    link: '#',
-                    className: 'current'
-                }
-                ,
-                {
-                    name: 'About',
-                    link: '#'
-                },
-                {
-                    name: 'Services',
-                    link: '#'
-                },
-            ]
-        };
+import {UPDATE_PAGE} from "../actions/page-actions";
+import {connect} from "react-redux";
+import {store} from "../index"
 
+export const HeaderHome = {
+    companyName: "Liran Farage",
+    lineOfBusiness: "Web Developer",
+    pages: [
+        {
+            name: 'Home',
+            link: '#',
+            onPageClicked: () => store.dispatch({
+                type: UPDATE_PAGE,
+                payload: {name: 'Home'}
+            })
+        },
+        {
+            name: 'About',
+            link: '#',
+            // onPageClicked: (UPDATE_PAGE, {page: 'about'})
+            onPageClicked: () => store.dispatch({
+                type: UPDATE_PAGE,
+                payload: {name: 'About'}
+            })
+        },
+        {
+            name: 'Services',
+            link: '#',
+            onPageClicked: () => store.dispatch({
+                type: UPDATE_PAGE,
+                payload: {name: 'Services'}
+            })
+            // onPageClicked: dispatch(UPDATE_PAGE, {page: 'services'})
+        },
+    ]
+};
+
+
+export const headerAbout = {
+    companyName: "Liran Farage",
+    lineOfBusiness: "Web Developer",
+    pages: [
+        {
+            name: 'Home',
+            link: '#',
+            onPageClicked: () => store.dispatch({
+                type: UPDATE_PAGE,
+                payload: {name: 'Home'}
+            })
+        },
+        {
+            name: 'About',
+            link: '#',
+            // onPageClicked: (UPDATE_PAGE, {page: 'about'})
+            onPageClicked: () => store.dispatch({
+                type: UPDATE_PAGE,
+                payload: {name: 'About'}
+            })
+        },
+        {
+            name: 'Services',
+            link: '#',
+            onPageClicked: () => store.dispatch({
+                type: UPDATE_PAGE,
+                payload: {name: 'Services'}
+            })
+            // onPageClicked: dispatch(UPDATE_PAGE, {page: 'services'})
+        },
+    ]
+};
+
+export const headerServices = {
+    companyName: "Liran Farage",
+    lineOfBusiness: "Web Developer",
+    pages: [
+        {
+            name: 'Home',
+            link: '#',
+            onPageClicked: () => store.dispatch({
+                type: UPDATE_PAGE,
+                payload: {name: 'Home'}
+            })
+        },
+        {
+            name: 'About',
+            link: '#',
+            // onPageClicked: (UPDATE_PAGE, {page: 'about'})
+            onPageClicked: () => store.dispatch({
+                type: UPDATE_PAGE,
+                payload: {name: 'About'}
+            })
+        },
+        {
+            name: 'Services',
+            link: '#',
+            onPageClicked: () => store.dispatch({
+                type: UPDATE_PAGE,
+                payload: {name: 'Services'}
+            })
+            // onPageClicked: dispatch(UPDATE_PAGE, {page: 'services'})
+        },
+    ]
+};
 export const showcase = {
-            header: "Affordable Professional Web Developing",
-            body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia accumsan erat, a\
+    header: "Affordable Professional Web Developing",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia accumsan erat, a\
                             vestibulum velit volutpat ut. Maecenas volutpat augue nibh,\
                             vitae rutrum ex congue eget. Cras lectus ex, varius at neque et, mollis luctus quam.\
                             Vivamus fermentum nisi id aliquet ultricies. Vestibulum cursus erat sit amet risus facilisis\
@@ -32,26 +114,26 @@ export const showcase = {
                             Vestibulum nec porttitor ex. Nam bibendum dui erat, nec commodo ex aliquet ac.\
                             Aliquam a dictum lectus, nec lobortis massa. Sed tincidunt diam vulputate, ullamcorper nisl\
                             sit amet, venenatis purus."
-        };
+};
 
 export const newsletter = {
-            header: "Subscribe to my Newsletter",
-        };
+    header: "Subscribe to my Newsletter",
+};
 
 export const boxes = [
     {
         title: "HTML5 Markup",
-        body:  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia accumsan erat, a vestibulum velit volutpat ut.",
-        img:   "img/logo_html.png"
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia accumsan erat, a vestibulum velit volutpat ut.",
+        img: "img/logo_html.png"
     },
     {
         title: "CSS3 Styling",
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia accumsan erat, a vestibulum velit volutpat ut.",
-        img:  "img/logo_css.png"
+        img: "img/logo_css.png"
     },
     {
         title: "React Redux",
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia accumsan erat, a vestibulum velit volutpat ut.",
-        img:  "img/logo_react_redux.png",
+        img: "img/logo_react_redux.png",
     }
 ]

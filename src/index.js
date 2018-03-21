@@ -7,11 +7,13 @@ import { combineReducers, createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
 import productsReducer from './reducers/products-reducer'
 import userReducer from './reducers/user-reducer'
+import pageReducer from './reducers/page-reducer'
 import dataService from "./middlewares/dataService";
 
 const allReducers = combineReducers({
     products: productsReducer,
-    users: userReducer
+    users: userReducer,
+    page: pageReducer
 });
 
 const initial_state = {
@@ -24,8 +26,9 @@ const allStoreEnhancers = compose(
     window.devToolsExtension && window.devToolsExtension()
 );
 
+//TODO: This is BAD! cancel the store exporting.
 // creating the store with the reducer injected,
-const store = createStore(allReducers,
+export const store = createStore(allReducers,
     initial_state,
     allStoreEnhancers
 );

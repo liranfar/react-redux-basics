@@ -7,6 +7,8 @@ import {createSelector} from 'reselect'
 // import GenerateUserBtn from "./components/dumb/GenerateUserBtn";
 // import {UsersInfo} from "./components/dumb/UsersInfo";
 import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Services from "./components/pages/Services";
 
 
 class App extends Component {
@@ -26,9 +28,14 @@ class App extends Component {
     }
 
     render() {
+        const page = this.props.page;
         return (
             <div className="">
-                <Home />
+                { page === 'Home' &&  <Home /> }
+                { page === 'About' &&  <About /> }
+                { page === 'Services' &&  <Services /> }
+                {/*<About/>*/}
+                {/*<Services/>*/}
             </div>
         );
     }
@@ -43,12 +50,18 @@ const userSelector = createSelector(
     state => state.users,
     users => users
 );
+const pageSelector = createSelector(
+    state => state.page,
+    page => page
+);
 const mapStateToProps = createSelector(
     productSelector,
     userSelector,
-    (products, users) => ({
+    pageSelector,
+    (products, users, page) => ({
         products,
-        users
+        users,
+        page
     })
 );
 
