@@ -136,4 +136,5 @@ export const boxes = [
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia accumsan erat, a vestibulum velit volutpat ut.",
         img: "img/logo_react_redux.png",
     }
-]
+];
+
