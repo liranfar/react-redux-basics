@@ -34,8 +34,6 @@ class App extends Component {
                 { page === 'Home' &&  <Home /> }
                 { page === 'About' &&  <About /> }
                 { page === 'Services' &&  <Services /> }
-                {/*<About/>*/}
-                {/*<Services/>*/}
             </div>
         );
     }

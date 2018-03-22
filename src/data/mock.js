@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {store} from "../index"
 
 export const HeaderHome = {
-    companyName: "Liran Farage",
+    companyName: "Liran",
     lineOfBusiness: "Web Developer",
     pages: [
         {
@@ -37,7 +37,7 @@ export const HeaderHome = {
 
 
 export const headerAbout = {
-    companyName: "Liran Farage",
+    companyName: "Liran",
     lineOfBusiness: "Web Developer",
     pages: [
         {
@@ -70,7 +70,7 @@ export const headerAbout = {
 };
 
 export const headerServices = {
-    companyName: "Liran Farage",
+    companyName: "Liran",
     lineOfBusiness: "Web Developer",
     pages: [
         {
