@@ -1,6 +1,5 @@
 import {UPDATE_PAGE} from "../actions/page-actions";
-import {connect} from "react-redux";
-import {store} from "../index"
+import {store} from "../index";
 
 export const HeaderHome = {
     companyName: "Liran",
@@ -8,7 +7,7 @@ export const HeaderHome = {
     pages: [
         {
             name: 'Home',
-            link: '#',
+            link: '/',
             onPageClicked: () => store.dispatch({
                 type: UPDATE_PAGE,
                 payload: {name: 'Home'}
@@ -16,7 +15,7 @@ export const HeaderHome = {
         },
         {
             name: 'About',
-            link: '#',
+            link: '/about',
             // onPageClicked: (UPDATE_PAGE, {page: 'about'})
             onPageClicked: () => store.dispatch({
                 type: UPDATE_PAGE,
@@ -25,7 +24,7 @@ export const HeaderHome = {
         },
         {
             name: 'Services',
-            link: '#',
+            link: '/services',
             onPageClicked: () => store.dispatch({
                 type: UPDATE_PAGE,
                 payload: {name: 'Services'}
@@ -42,7 +41,7 @@ export const headerAbout = {
     pages: [
         {
             name: 'Home',
-            link: '#',
+            link: '/',
             onPageClicked: () => store.dispatch({
                 type: UPDATE_PAGE,
                 payload: {name: 'Home'}
@@ -50,7 +49,7 @@ export const headerAbout = {
         },
         {
             name: 'About',
-            link: '#',
+            link: '/about',
             // onPageClicked: (UPDATE_PAGE, {page: 'about'})
             onPageClicked: () => store.dispatch({
                 type: UPDATE_PAGE,
@@ -59,7 +58,7 @@ export const headerAbout = {
         },
         {
             name: 'Services',
-            link: '#',
+            link: '/services',
             onPageClicked: () => store.dispatch({
                 type: UPDATE_PAGE,
                 payload: {name: 'Services'}
@@ -75,7 +74,7 @@ export const headerServices = {
     pages: [
         {
             name: 'Home',
-            link: '#',
+            link: '/',
             onPageClicked: () => store.dispatch({
                 type: UPDATE_PAGE,
                 payload: {name: 'Home'}
@@ -83,7 +82,7 @@ export const headerServices = {
         },
         {
             name: 'About',
-            link: '#',
+            link: '/about',
             // onPageClicked: (UPDATE_PAGE, {page: 'about'})
             onPageClicked: () => store.dispatch({
                 type: UPDATE_PAGE,
@@ -92,7 +91,7 @@ export const headerServices = {
         },
         {
             name: 'Services',
-            link: '#',
+            link: '/services',
             onPageClicked: () => store.dispatch({
                 type: UPDATE_PAGE,
                 payload: {name: 'Services'}

@@ -1,28 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import {AppRouter} from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-import { combineReducers, createStore, applyMiddleware, compose } from 'redux'
-import { Provider } from 'react-redux'
+import {combineReducers, createStore, applyMiddleware, compose} from 'redux'
+import {Provider} from 'react-redux'
 import productsReducer from './reducers/products-reducer'
 import userReducer from './reducers/user-reducer'
-import pageReducer from './reducers/page-reducer'
 import dataService from "./middlewares/dataService";
+import createHistory from 'history/createBrowserHistory'
+import {ConnectedRouter, routerReducer, routerMiddleware, push} from 'react-router-redux'
 
 const allReducers = combineReducers({
     products: productsReducer,
     users: userReducer,
-    page: pageReducer
+    router: routerReducer
 });
+
+const history = createHistory();
 
 const initial_state = {
     products: [{name: 'iPhone'}],
-    users: []
+    users: [],
+    router: {
+        pathname: '/'
+    }
 };
 
 const allStoreEnhancers = compose(
-    applyMiddleware(dataService),
+    applyMiddleware(dataService, routerMiddleware(history)),
     window.devToolsExtension && window.devToolsExtension()
 );
 
@@ -34,11 +40,12 @@ export const store = createStore(allReducers,
 );
 
 
-
 ReactDOM.render(
     <Provider store={store}>
-        <App aRandomProps="whatever"/>
+        <ConnectedRouter history={history}>
+            <AppRouter />
+        </ConnectedRouter>
     </Provider>,
     document.getElementById('root')
-        );
+);
 registerServiceWorker();

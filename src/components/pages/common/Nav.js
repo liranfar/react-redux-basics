@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {Link} from "react-router-dom";
 
 class Nav extends Component {
 
     render() {
         const pages = this.props.pages.map((page, index) =>
             <li key={index} className={ page.name === this.props.selected ? 'current': ''}>
-                <a href="#" onClick={page.onPageClicked}>{page.name}</a>
+                <Link to={page.link}>{page.name}</Link>
             </li>
         );
         return (
