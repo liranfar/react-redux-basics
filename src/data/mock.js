@@ -3,7 +3,7 @@ import {store} from "../index";
 
 export const HeaderHome = {
     companyName: "Liran",
-    lineOfBusiness: "Web Developer",
+    lineOfBusiness: "Farage",
     pages: [
         {
             name: 'Home',
@@ -37,7 +37,7 @@ export const HeaderHome = {
 
 export const headerAbout = {
     companyName: "Liran",
-    lineOfBusiness: "Web Developer",
+    lineOfBusiness: "Farage",
     pages: [
         {
             name: 'Home',
@@ -70,7 +70,7 @@ export const headerAbout = {
 
 export const headerServices = {
     companyName: "Liran",
-    lineOfBusiness: "Web Developer",
+    lineOfBusiness: "Farage",
     pages: [
         {
             name: 'Home',

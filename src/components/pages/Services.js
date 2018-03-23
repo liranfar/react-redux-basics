@@ -15,7 +15,7 @@ class Services extends Component {
                     companyName={headerServices.companyName}
                     lineOfBusiness={headerServices.lineOfBusiness}
                 />
-                <Newsletter header={newsletter.header}/>
+                {/*<Newsletter header={newsletter.header}/>*/}
                 <ServicesBody />
                 {/*<Boxes boxes={boxes}/>*/}
                 <Footer companyName={headerServices.companyName} lineOfBusiness={headerServices.lineOfBusiness}/>

@@ -6,6 +6,7 @@ class Showcase extends Component {
         return(
             <section id="showcase">
                     <div className="container">
+                        <img src="https://www.w3schools.com/howto/img_avatar.png" id="avatar" />
                         <h1>{this.props.header}</h1>
                         <p>
                             {this.props.body}

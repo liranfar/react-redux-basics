@@ -45,9 +45,11 @@ ul {
 header {
   background: #35424a;
   color: #ffffff;
-  padding-top: 30px;
-  min-height: 70px;
-  border-bottom: @main_blue 3px solid;
+  /*padding-top: 15px;*/
+  min-height: 75px;
+  //border-bottom: @main_blue 3px solid;
+  width: 100%;
+  position: fixed;
 
   a {
     color: #ffffff;
@@ -65,13 +67,13 @@ header {
   #branding {
     float: left;
 
-    h1 {
+    label {
       margin: 0;
     }
   }
   nav {
     float: right;
-    margin-top: 10px;
+    margin-top: 25px;
   }
   .highlight, .current a {
     color: @main_blue;
@@ -87,21 +89,28 @@ header {
 /* Showcase */
 #showcase {
   min-height: 400px;
-  background: linear-gradient(
+  padding-top: 130px;
+  /*background: linear-gradient(
           rgba(0, 0, 0, 0.4),
           rgba(0, 0, 0, 0.4)
-  ), url(@showcase_path) no-repeat 0 0;
+  );*/
   text-align: center;
-  color: white;
+  //color: white;
 
   h1 {
-    margin-top: 100px;
+    margin-top: 50px;
     font-size: 55px;
     margin-bottom: 10px;
   }
 
   p {
     font-size: 20px;
+    margin-bottom: 50px;
+  }
+  #avatar {
+    border-radius: 50%;
+    width: 15%;
+    margin-top: 20px;
   }
 }
 
@@ -131,12 +140,16 @@ header {
 /* Boxes */
 #boxes {
   margin-top: 20px;
+  background: @main_blue;
+  padding-top: 20px;
 
   .box {
     float: left;
     width: 30%;
     padding: 10px;
     text-align: center;
+    color: #f4f4f4;
+    //border: 1px solid;
 
     img {
       width: 90px;
@@ -147,9 +160,9 @@ header {
 /* Footer */
 footer {
   padding: 5px;
-  margin-top: 10px;
+  //margin-top: 10px;
   color: #ffffff;
-  background-color: @main_blue;
+  background-color: #35424a;
   text-align: center;
   //font-size: 18px;
 }
@@ -194,6 +207,13 @@ article#main-col {
   float: left;
   width: 65%;
 }
+
+/* Main */
+
+section#main {
+  padding-top: 80px;
+}
+
 
 /* Media Queries */
 @media (max-width: @tablet_screen_size) {

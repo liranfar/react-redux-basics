@@ -17,7 +17,7 @@ class About extends Component {
                     lineOfBusiness={headerAbout.lineOfBusiness}
                 />
                 {/*<Showcase header={showcase.header} body={showcase.body}/>*/}
-                <Newsletter header={newsletter.header}/>
+                {/*<Newsletter header={newsletter.header}/>*/}
                 <Main />
                 {/*<Boxes boxes={boxes}/>*/}
                 <Footer companyName={headerAbout.companyName} lineOfBusiness={headerAbout.lineOfBusiness}/>

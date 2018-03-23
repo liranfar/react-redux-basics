@@ -6,7 +6,7 @@ class Brand extends Component {
         const {companyName, lineOfBusiness} = this.props;
         return (
             <div id="branding">
-                <h1><span className="highlight">{companyName}</span> - {lineOfBusiness}</h1>
+                <h2>{/*<span className="highlight"></span>*/} {companyName} {lineOfBusiness}</h2>
             </div>
         );
     }

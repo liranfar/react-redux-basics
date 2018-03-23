@@ -25,9 +25,9 @@ class Home extends Component {
                     body={showcase.body}
                 />
 
-                <Newsletter
+                {/*<Newsletter
                     header={newsletter.header}
-                />
+                />*/}
                 <Boxes
                     boxes={boxes}
                 />
