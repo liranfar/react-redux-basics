@@ -13,7 +13,8 @@ import Footer from "./common/Footer";
 class Home extends Component {
     render() {
         return (
-            <div>
+            <div id="home">
+                <div id="spacing" />
                 <Header
                     pages={HeaderHome.pages}
                     companyName={HeaderHome.companyName}
@@ -28,9 +29,9 @@ class Home extends Component {
                 {/*<Newsletter
                     header={newsletter.header}
                 />*/}
-                <Boxes
+                {/*<Boxes
                     boxes={boxes}
-                />
+                />*/}
                 <Footer
                     companyName={HeaderHome.companyName}
                     lineOfBusiness={HeaderHome.lineOfBusiness}

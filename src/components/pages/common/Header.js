@@ -7,12 +7,12 @@ class Header extends Component {
     render() {
         const {companyName, pages, lineOfBusiness, selected} = this.props;
         return (
-            <header className="">
-                <div className="container">
-                    <Brand companyName={companyName} lineOfBusiness={lineOfBusiness}/>
-                    <Nav pages={pages} selected={selected}/>
-                </div>
-            </header>
+                <header id="header">
+                    <div className="container">
+                        <Brand companyName={companyName} lineOfBusiness={lineOfBusiness}/>
+                        <Nav pages={pages} selected={selected}/>
+                    </div>
+                </header>
         );
     }
 }
@@ -21,7 +21,7 @@ Header.propTypes = {
     pages: PropTypes.array.isRequired,
     companyName: PropTypes.string.isRequired,
     lineOfBusiness: PropTypes.string.isRequired,
-    selected:PropTypes.string.isRequired
+    selected: PropTypes.string.isRequired
 };
 Header.defaultProps = {};
 

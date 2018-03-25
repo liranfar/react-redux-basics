@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './style/style.css';
+import './style/media.css';
 import {connect} from 'react-redux';
 import {createSelector} from 'reselect'
 import Home from "./components/pages/Home";
@@ -7,6 +8,7 @@ import About from "./components/pages/About";
 import Services from "./components/pages/Services";
 import {Route, Switch} from "react-router";
 import { withRouter } from 'react-router-dom'
+import Rwd from "./components/Rwd";
 
 class App extends Component {
     constructor(props) {
@@ -17,9 +19,10 @@ class App extends Component {
         const page = this.props.page;
         return (
             <ConnectedSwitch>
-                <Route exact path="/" component={Home}/>
+                <Route exact path="/" component={Rwd}/>
+                {/*<Route exact path="/" component={Home}/>
                 <Route exact path="/about" component={About}/>
-                <Route exact path="/services" component={Services}/>
+                <Route exact path="/services" component={Services}/>*/}
             </ConnectedSwitch>
 
         );

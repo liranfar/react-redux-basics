@@ -5,9 +5,9 @@ class Footer extends Component {
     render() {
         return (
             <footer>
-                <p>
+                <div>
                     {this.props.companyName + ' - ' + this.props.lineOfBusiness} , Copyright &copy; 2018
-                </p>
+                </div>
             </footer>
         );
     }
