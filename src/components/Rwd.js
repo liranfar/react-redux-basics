@@ -1,31 +1,20 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+import Footer from "./pages/common/Footer";
 
 export default () =>
     <div>
-        <nav className="row">
-            <div id="brand-name" className="col-8 col-s-4">
-                <label>Liran Farage</label>
-            </div>
-            <div className="menu">
-                <ul>
-                    <li className="col-1 col-s-2 current">Home</li>
-                    <li className="col-1 col-s-2">About</li>
-                    <li className="col-1 col-s-2">Services</li>
-                    <li className="col-1 col-s-2">Contact</li>
-                </ul>
-            </div>
-        </nav>
         <header>
             <div className="row">
                 <img className="col-12 col-s-12 center" src="img/profile.jpg"
                      id="avatar"/>
             </div>
             <div className="row">
-                <h2 className="col-5 col-s-5 center">Hello! My name is Liran, and I'm a full-stack developer based in
-                    Israel</h2>
+                <h1 className="col-5 col-s-5 center">Hello! My name is Liran, and I'm a full-stack developer based in
+                    Israel</h1>
             </div>
         </header>
-        <section id="tech">
+       {/* <section id="tech">
             <div className="row">
                 <h1 className="col-12 col-s-12 center">Technologies</h1>
             </div>
@@ -63,10 +52,7 @@ export default () =>
                     <p className="">Pellentesque blandit pulvinar nisl at iaculis. Aenean nec tempus libero. Aenean sed dui arcu. Sed eget sem eu erat sodales tempus. In quis dictum felis. Suspendisse pharetra eu sapien nec hendrerit. Cras fermentum metus a venenatis viverra. Aliquam pharetra tristique varius.</p>
                 </div>
             </div>
-        </section>
-        <div className="footer">
-            <h3>Liran Farage - full-stack developer. Copyright &copy; 2018</h3>
-        </div>
+        </section>*/}
     </div>
 
 

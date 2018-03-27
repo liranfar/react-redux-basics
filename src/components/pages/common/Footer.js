@@ -4,18 +4,16 @@ import PropTypes from 'prop-types';
 class Footer extends Component {
     render() {
         return (
-            <footer>
-                <div>
-                    {this.props.companyName + ' - ' + this.props.lineOfBusiness} , Copyright &copy; 2018
-                </div>
-            </footer>
+            <div className="footer">
+                <h3>Liran Farage - full-stack developer. Copyright &copy; 2018</h3>
+            </div>
         );
     }
 }
 
 Footer.propTypes = {
-    companyName: PropTypes.string.isRequired,
-    lineOfBusiness: PropTypes.string.isRequired
+    /*    companyName: PropTypes.string.isRequired,
+        lineOfBusiness: PropTypes.string.isRequired*/
 };
 Footer.defaultProps = {};
 
