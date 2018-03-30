@@ -1,0 +1,127 @@
+section#resume {
+  min-height: 77.2vh;
+  padding-top: 15px;
+  .tabs-icon {
+    margin: 0 auto 30px auto;
+    float:none;
+    color: #fff;
+    li {
+      display: inline-block;
+      padding: 10px 30px;
+      background: #154f81;
+      border: 1px transparent solid;
+      color: #fff;
+      border-radius: 30px;
+      /*margin: 0 -2px;*/
+      cursor: pointer;
+
+      &:first-child {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+      }
+      &:last-child {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+      }
+      &:active {
+        border: 1px white solid;
+      }
+
+      h6 {
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding-left: 10px;
+        margin: 0;
+      }
+    }
+  }
+  .resume-content {
+    h6 {
+      margin: 0;
+      color: #eee;
+    }
+
+    P {
+      color: #eee;
+    }
+    [class*="col-"] {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .main-icon {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 50%;
+      border: 2px solid #eee;
+      color: #eee;
+      font-size: 25px;
+      margin: 0 auto 50px;
+      text-align: center;
+      position: relative;
+
+      &:after {
+        content: '';
+        width: 2px;
+        height: 45px;
+        background: #eee;
+        position: absolute;
+        bottom: -45px;
+        left: calc(~'50% - 1px');
+      }
+    }
+
+    .inf .date {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 7px 18px;
+      background: #eee;
+      color: #154f81;
+      border-radius: 20px;
+      position: relative;
+    }
+
+    .cont {
+      position: relative;
+      /*Move border side line to right*/
+      &.text-right:before {
+        left: calc(~'100% + 16px');
+
+      }
+      /*Move bullets*/
+      &.text-right:after {
+       left: calc(~'100% + 8px');
+      }
+      /* border side line */
+      &:before {
+        content: '';
+        width: 2px;
+        height: calc(~'100% - 30px');
+        background: #eee;
+        position: absolute;
+        top: 22px;
+        left: -15px;
+      }
+      /* hide last one */
+      &.last:before {
+        display: none;
+      }
+      /*Bullets*/
+      &:after {
+        content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 1px solid #154f81;
+        background: #154f81;
+        position: absolute;
+        top: 0px;
+        left: -23px;
+        z-index: 9;
+      }
+    }
+  }
+}

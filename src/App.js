@@ -7,6 +7,7 @@ import Home from "./components/pages/Home";
 import {Route, Switch} from "react-router";
 import {withRouter} from 'react-router-dom'
 import Contact from "./components/pages/Contact";
+import Resume from "./components/pages/Resume";
 
 class App extends Component {
     constructor(props) {
@@ -19,9 +20,8 @@ class App extends Component {
             <ConnectedSwitch>
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/contact" component={Contact}/>
-                {/*<Route exact path="/" component={Home}/>
-                <Route exact path="/about" component={About}/>
-                <Route exact path="/services" component={Services}/>*/}
+                <Route exact path="/resume" component={Resume}/>
+                {/*<Route exact path="/services" component={Services}/>*/}
             </ConnectedSwitch>
 
         );

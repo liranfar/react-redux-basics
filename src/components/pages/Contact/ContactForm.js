@@ -34,7 +34,7 @@ class ContactForm extends Component {
                             </div>
                             <div className="col-12">
                                 <div className="form-group">
-                                    <input type="submit" value="Send Message"/>
+                                    <input type="submit" value="Under Construction"/>
                                 </div>
                             </div>
                         </div>

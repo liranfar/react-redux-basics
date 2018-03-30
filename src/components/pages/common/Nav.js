@@ -9,15 +9,16 @@ class Nav extends Component {
         /*TODO add facebook Linkedin*/
         return (
         <nav className="row">
-                    <div id="brand-name" className="col-8 col-s-4">
+                    <div id="brand-name" className="col-7 col-s-12">
                         <label>Liran Farage</label>
                     </div>
                     <div className="menu">
                         <ul>
-                           <Link to="/"> <li className={'col-1 col-s-2 ' + (selected === 'Home' ? 'current' : '')}>Home</li></Link>
-                            <li className={'col-1 col-s-2 ' + (selected === 'About' ? 'current' : '')}>About</li>
-                            <li className={'col-1 col-s-2 ' + (selected === 'Services' ? 'current' : '')}>Services</li>
-                            <Link to="/contact"><li className={'col-1 col-s-2 ' + (selected === 'Contact' ? 'current' : '')}>Contact</li></Link>
+                           <Link to="/"> <li className={'col-1 col-s-12 ' + (selected === 'Home' ? 'current' : '')}>Home</li></Link>
+                            <li className={'col-1 col-s-12 ' + (selected === 'About' ? 'current' : '')}>About</li>
+                            <Link to="/resume"><li className={'col-1 col-s-12 ' + (selected === 'Resume' ? 'current' : '')}>Resume</li></Link>
+                            <li className={'col-1 col-s-12 ' + (selected === 'Services' ? 'current' : '')}>Services</li>
+                            <Link to="/contact"><li className={'col-1 col-s-12 ' + (selected === 'Contact' ? 'current' : '')}>Contact</li></Link>
                         </ul>
                     </div>
                 </nav>
