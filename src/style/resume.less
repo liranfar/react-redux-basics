@@ -23,7 +23,7 @@ section#resume {
         border-bottom-left-radius: 0;
         border-top-left-radius: 0;
       }
-      &:active {
+      &.active {
         border: 1px white solid;
       }
 
@@ -89,8 +89,12 @@ section#resume {
       /*Move border side line to right*/
       &.text-right:before {
         left: calc(~'100% + 16px');
-
       }
+      /* Experience fix*/
+      &.text-right.pb-50.no-border:before {
+          display:none;
+        }
+
       /*Move bullets*/
       &.text-right:after {
        left: calc(~'100% + 8px');
