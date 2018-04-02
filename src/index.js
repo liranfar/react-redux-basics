@@ -10,7 +10,7 @@ import userReducer from './reducers/user-reducer'
 import dataService from "./middlewares/dataService";
 import createHistory from 'history/createBrowserHistory'
 import {ConnectedRouter, routerReducer, routerMiddleware, push} from 'react-router-redux'
-
+import { composeWithDevTools } from 'redux-devtools-extension';
 const allReducers = combineReducers({
     products: productsReducer,
     users: userReducer,
@@ -27,9 +27,8 @@ const initial_state = {
     }
 };
 
-const allStoreEnhancers = compose(
-    applyMiddleware(dataService, routerMiddleware(history)),
-    window.devToolsExtension && window.devToolsExtension()
+const allStoreEnhancers = composeWithDevTools(
+    applyMiddleware(dataService, routerMiddleware(history))
 );
 
 //TODO: This is BAD! cancel the store exporting.

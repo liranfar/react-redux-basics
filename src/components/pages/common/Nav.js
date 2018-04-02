@@ -14,11 +14,11 @@ class Nav extends Component {
                     </div>
                     <div className="menu">
                         <ul>
-                           <Link to="/"> <li className={'col-1 col-s-12 ' + (selected === 'Home' ? 'current' : '')}>Home</li></Link>
+                           <Link to={process.env.PUBLIC_URL + '/'}> <li className={'col-1 col-s-12 ' + (selected === 'Home' ? 'current' : '')}>Home</li></Link>
                             <li className={'col-1 col-s-12 ' + (selected === 'About' ? 'current' : '')}>About</li>
-                            <Link to="/resume"><li className={'col-1 col-s-12 ' + (selected === 'Resume' ? 'current' : '')}>Resume</li></Link>
+                            <Link to={process.env.PUBLIC_URL + '/resume'}><li className={'col-1 col-s-12 ' + (selected === 'Resume' ? 'current' : '')}>Resume</li></Link>
                             <li className={'col-1 col-s-12 ' + (selected === 'Services' ? 'current' : '')}>Services</li>
-                            <Link to="/contact"><li className={'col-1 col-s-12 ' + (selected === 'Contact' ? 'current' : '')}>Contact</li></Link>
+                            <Link to={process.env.PUBLIC_URL + '/contact'}><li className={'col-1 col-s-12 ' + (selected === 'Contact' ? 'current' : '')}>Contact</li></Link>
                         </ul>
                     </div>
                 </nav>

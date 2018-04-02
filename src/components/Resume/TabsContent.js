@@ -9,12 +9,12 @@ export default (props) => {
                                         </div>
 
                                         <div className="row">
-                                            <div className="col-6">
+                                            <div className="col-6-fixed">
                                                 <div className="inf text-right">
                                                     <span className="date">2018 - Present</span>
                                                 </div>
                                             </div>
-                                            <div className="col-6">
+                                            <div className="col-6-fixed">
                                                 <div className="cont pb-50">
                                                     <h6 className="sm-title">Full-stack developer - Self employed</h6>
                                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -24,12 +24,12 @@ export default (props) => {
                                             </div>
                                         </div>
                                         <div className="row">
-                                            <div className="float-right col-6">
+                                            <div className="float-right col-6-fixed">
                                                 <div className="inf">
                                                     <span className="date">2016 - 2018</span>
                                                 </div>
                                             </div>
-                                            <div className="col-6">
+                                            <div className="col-6-fixed">
                                                 <div className="cont text-right pb-50 no-border">
                                                     <h6 className="sm-title">Software developer - NGSoft Ltd.</h6>
                                                     <p>AngularJs, API, Java Gradle TomEE MicroServices Cassandra MySQL
@@ -41,12 +41,12 @@ export default (props) => {
                                         </div>
                                                                     {/* Experience Fix */}
                                         <div className="row" style={{'display': 'none'}}>
-                                            <div className="col-6">
+                                            <div className="col-6-fixed">
                                                 <div className="inf text-right">
                                                     <span className="date">2011 - 2014</span>
                                                 </div>
                                             </div>
-                                            <div className="col-6">
+                                            <div className="col-6-fixed">
                                                 <div className="cont last">
                                                     <h6 className="sm-title">Lorem Ipsum.</h6>
                                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -64,12 +64,12 @@ export default (props) => {
                                         </div>
 
                                         <div className="row">
-                                            <div className="col-6">
+                                            <div className="col-6-fixed">
                                                 <div className="inf text-right">
                                                     <span className="date">2013 - 2017</span>
                                                 </div>
                                             </div>
-                                            <div className="col-6">
+                                            <div className="col-6-fixed">
                                                 <div className="cont pb-50">
                                                     <h6 className="sm-title"><a href="http://in.bgu.ac.il/en/engn/sise/Pages/default.aspx">Ben-Gurion</a> University</h6>
                                                     <p>Information System Engineer (Bsc.) </p>
@@ -77,12 +77,12 @@ export default (props) => {
                                             </div>
                                         </div>
                                         <div className="row">
-                                            <div className="float-right col-6">
+                                            <div className="float-right col-6-fixed">
                                                 <div className="inf">
                                                     <span className="date">2007-2008</span>
                                                 </div>
                                             </div>
-                                            <div className="col-6">
+                                            <div className="col-6-fixed">
                                                 <div className="cont text-right pb-50">
                                                     <h6 className="sm-title"><a href="https://www.appleseeds.org.il/the-neta-program?page_id=2">Net@</a>  Program</h6>
                                                     <p><a href="https://en.wikipedia.org/wiki/CCNA">CCNA</a> and <a
@@ -91,12 +91,12 @@ export default (props) => {
                                             </div>
                                         </div>
                                         <div className="row">
-                                            <div className="col-6">
+                                            <div className="col-6-fixed">
                                                 <div className="inf text-right">
                                                     <span className="date">2004 - 2007</span>
                                                 </div>
                                             </div>
-                                            <div className="col-6">
+                                            <div className="col-6-fixed">
                                                 <div className="cont last">
                                                     <h6 className="sm-title"> <a href="https://lod-science.atidedu.org.il/english/"> "Aleh"</a> - High School for art and science</h6>
                                                     <p>Computer Science</p>

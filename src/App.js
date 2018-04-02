@@ -18,10 +18,11 @@ class App extends Component {
         const page = this.props.page;
         return (
             <ConnectedSwitch>
-                <Route exact path="/" component={Home}/>
-                <Route exact path="/contact" component={Contact}/>
-                <Route exact path="/resume" component={Resume}/>
+                <Route exact path={process.env.PUBLIC_URL + '/'} component={Home}/>
+                <Route exact path={process.env.PUBLIC_URL + '/contact'} component={Contact}/>
+                <Route exact path={process.env.PUBLIC_URL +'/resume'} component={Resume}/>
                 {/*<Route exact path="/services" component={Services}/>*/}
+                <Route path='*' component={ () => <h1>404</h1>} />
             </ConnectedSwitch>
 
         );

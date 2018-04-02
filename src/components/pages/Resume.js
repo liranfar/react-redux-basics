@@ -12,7 +12,7 @@ class Resume extends Component {
         this.state = {
             currentTab: "tab-1",
             tab1class: "active",
-            tab2class: undefined
+            tab2class: ''
         };
         this.onChangeTab = this.onChangeTab.bind(this);
     }

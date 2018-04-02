@@ -2,6 +2,7 @@
   "name": "learn-coding-tutorials",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://liranfar.github.io/react-redux-basics",
   "dependencies": {
     "axios": "^0.18.0",
     "history": "^4.7.2",
@@ -22,12 +23,16 @@
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "gh-pages": "^1.1.0",
     "node-less-chokidar": "git+https://github.com/sampi/node-less-chokidar.git",
     "node-sass-chokidar": "^1.1.2",
     "npm-run-all": "^4.1.2",
-    "prop-types": "^15.6.1"
+    "prop-types": "^15.6.1",
+    "redux-devtools-extension": "^2.13.2"
   }
 }
