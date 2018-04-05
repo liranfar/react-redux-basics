@@ -17,9 +17,7 @@ export default (props) => {
                                             <div className="col-6-fixed">
                                                 <div className="cont pb-50">
                                                     <h6 className="sm-title">Full-stack developer - Self employed</h6>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                                        eiusmod tempor incididunt ut labore et dolore magna cillum
-                                                        dolore eu fugiat aliqua.</p>
+                                                    <p>Develop short & long term web projects for customers all over the world.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -31,11 +29,12 @@ export default (props) => {
                                             </div>
                                             <div className="col-6-fixed">
                                                 <div className="cont text-right pb-50 no-border">
-                                                    <h6 className="sm-title">Software developer - NGSoft Ltd.</h6>
-                                                    <p>AngularJs, API, Java Gradle TomEE MicroServices Cassandra MySQL
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                                        eiusmod tempor incididunt ut labore et dolore magna cillum
-                                                        dolore eu fugiat aliqua.</p>
+                                                    <h6 className="sm-title">Software developer - <a href="http://www.ngsoft.com/">NGSoft Ltd.</a></h6>
+                                                    <p>Taken a part in full-stack developing the next generation of national Alert system
+                                                        incorporated Beeper Inc. and IDC's Home Front Command .
+                                                        Front-end developer in "Ararit" project: appeals system for passengers of the light rail
+                                                        in Jerusalem.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -49,9 +48,7 @@ export default (props) => {
                                             <div className="col-6-fixed">
                                                 <div className="cont last">
                                                     <h6 className="sm-title">Lorem Ipsum.</h6>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                                        eiusmod tempor incididunt ut labore et dolore magna cillum
-                                                        dolore eu fugiat aliqua.</p>
+                                                    <p>Technologies:  TomEE (Java server-side libraries), AngularJs, CassandraDB, mySQL, SVN for versions control, Continuous Integration with Jenkins.</p>
                                                 </div>
                                             </div>
                                         </div>

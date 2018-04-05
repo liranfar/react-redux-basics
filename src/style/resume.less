@@ -1,6 +1,10 @@
 section#resume {
   min-height: 77.2vh;
   padding-top: 15px;
+  h1 {
+    color: white;
+    font-size: 2em;
+  }
   .tabs-icon {
     margin: 0 auto 30px auto;
     float:none;
@@ -9,9 +13,10 @@ section#resume {
       display: inline-block;
       padding: 10px 2vh;
       background: #154f81;
-      border: 1px transparent solid;
+      border: 0.5px #272f35 solid;
       color: #fff;
       border-radius: 30px;
+
       /*margin: 0 -2px;*/
       cursor: pointer;
 
@@ -24,7 +29,7 @@ section#resume {
         border-top-left-radius: 0;
       }
       &.active {
-        border: 1px white solid;
+        box-shadow: inset 0px 0px 10px #272f35;
       }
 
       h6 {

@@ -31,6 +31,7 @@ class Resume extends Component {
                 <Nav selected="Resume"/>
                 <section id="resume">
                     <div className="row">
+                        <h1 className="text-center">My Resume</h1>
                         <TabsIcon onChangeTab={this.onChangeTab} tab1class={this.state.tab1class}
                                   tab2class={this.state.tab2class}/>
                         <TabsContent currentTab={this.state.currentTab}/>

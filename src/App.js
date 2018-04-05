@@ -8,6 +8,8 @@ import {Route, Switch} from "react-router";
 import {withRouter} from 'react-router-dom'
 import Contact from "./components/pages/Contact";
 import Resume from "./components/pages/Resume";
+import Services from "./components/pages/Services";
+import Tech from "./components/pages/Tech";
 
 class App extends Component {
     constructor(props) {
@@ -21,7 +23,8 @@ class App extends Component {
                 <Route exact path={process.env.PUBLIC_URL + '/'} component={Home}/>
                 <Route exact path={process.env.PUBLIC_URL + '/contact'} component={Contact}/>
                 <Route exact path={process.env.PUBLIC_URL +'/resume'} component={Resume}/>
-                {/*<Route exact path="/services" component={Services}/>*/}
+                <Route exact path={process.env.PUBLIC_URL +'/services'} component={Services}/>
+                <Route exact path={process.env.PUBLIC_URL +'/tech'} component={Tech}/>
                 <Route path='*' component={ () => <h1>404</h1>} />
             </ConnectedSwitch>
 
