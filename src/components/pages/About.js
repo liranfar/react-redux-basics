@@ -1,26 +1,16 @@
 import React, {Component} from 'react';
-import {headerAbout, newsletter} from "../../data/mock";
-import Main from "./About/Main";
-import Newsletter from "./common/Newsletter";
 import Footer from "./common/Footer";
-import Header from "./common/Header";
-
+import Nav from "./common/Nav";
+import AboutBody from "./About/Body";
+import '../../style/about.css';
 
 class About extends Component {
     render() {
         return (
-            <div>
-                <Header
-                    selected="About"
-                    pages={headerAbout.pages}
-                    companyName={headerAbout.companyName}
-                    lineOfBusiness={headerAbout.lineOfBusiness}
-                />
-                {/*<Showcase header={showcase.header} body={showcase.body}/>*/}
-                {/*<Newsletter header={newsletter.header}/>*/}
-                <Main />
-                {/*<Boxes boxes={boxes}/>*/}
-                <Footer companyName={headerAbout.companyName} lineOfBusiness={headerAbout.lineOfBusiness}/>
+            <div id="about">
+               <Nav selected="About"/>
+                <AboutBody />
+                <Footer/>
             </div>
         );
     }

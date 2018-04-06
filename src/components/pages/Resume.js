@@ -36,6 +36,17 @@ class Resume extends Component {
                                   tab2class={this.state.tab2class}/>
                         <TabsContent currentTab={this.state.currentTab}/>
                     </div>
+
+                    <div className="row" id="download-cv">
+                        <div className="col-2 center">
+                            <form method="get" action="docs/LiranFarageCV_EngUpdated.docx">
+                                <button type="submit" className="col-12"><span className="fa fa-download"
+                                                                               style={{paddingRight: '10px'}}/>Download
+                                    C.V
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </section>
                 <Footer/>
             </div>

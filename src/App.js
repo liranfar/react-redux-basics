@@ -10,6 +10,7 @@ import Contact from "./components/pages/Contact";
 import Resume from "./components/pages/Resume";
 import Services from "./components/pages/Services";
 import Tech from "./components/pages/Tech";
+import About from "./components/pages/About";
 
 class App extends Component {
     constructor(props) {
@@ -25,6 +26,7 @@ class App extends Component {
                 <Route exact path={process.env.PUBLIC_URL +'/resume'} component={Resume}/>
                 <Route exact path={process.env.PUBLIC_URL +'/services'} component={Services}/>
                 <Route exact path={process.env.PUBLIC_URL +'/tech'} component={Tech}/>
+                <Route exact path={process.env.PUBLIC_URL +'/about'} component={About}/>
                 <Route path='*' component={ () => <h1>404</h1>} />
             </ConnectedSwitch>
 
