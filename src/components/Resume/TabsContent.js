@@ -30,8 +30,8 @@ export default (props) => {
                                             <div className="col-6-fixed">
                                                 <div className="cont text-right pb-50 no-border">
                                                     <h6 className="sm-title">Software developer - <a href="http://www.ngsoft.com/">NGSoft Ltd.</a></h6>
-                                                    <p>Taken a part in full-stack developing the next generation of national Alert system
-                                                        incorporated Beeper Inc. and IDC's Home Front Command .
+                                                    <p>Taken a part in full-stack developing the next generation of national alert system
+                                                        incorporated Beeper Inc. and IDF's Home Front Command .
                                                         Front-end developer in "Ararit" project: appeals system for passengers of the light rail
                                                         in Jerusalem.
                                                     </p>
