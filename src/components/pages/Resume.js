@@ -39,12 +39,14 @@ class Resume extends Component {
 
                     <div className="row" id="download-cv">
                         <div className="col-2 center">
-                            <form method="get" action="docs/LiranFarageCV_EngUpdated.docx">
-                                <button type="submit" className="col-12"><span className="fa fa-download"
-                                                                               style={{paddingRight: '10px'}}/>Download
+                            <a href={`${process.env.PUBLIC_URL}/docs/LiranFarageCV_EngUpdated.docx`} download>
+                                <button type="submit" className="col-12"
+                                        onClick={`location.href=${process.env.PUBLIC_URL}/docs/LiranFarageCV_EngUpdated.docx`}><span
+                                    className="fa fa-download"
+                                    style={{paddingRight: '10px'}}/>Download
                                     C.V
                                 </button>
-                            </form>
+                            </a>
                         </div>
                     </div>
                 </section>
