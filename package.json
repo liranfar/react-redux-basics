@@ -2,7 +2,7 @@
   "name": "learn-coding-tutorials",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://liranfar.github.io/react-redux-basics",
+  "homepage": "https://liranfar.github.io",
   "dependencies": {
     "axios": "^0.18.0",
     "history": "^4.7.2",

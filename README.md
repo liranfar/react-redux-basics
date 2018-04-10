@@ -20,3 +20,4 @@ a skeleton for react-redux apps with api integration.
 * [RandomUserApi](https://randomuser.me/)
 * [axios](https://github.com/axios/axios)
 * [Redux DevToolsExtension](https://github.com/zalmoxisus/redux-devtools-extension)
+* [emotion-create-react-app-example](https://github.com/tkh44/emotion-create-react-app-example)
