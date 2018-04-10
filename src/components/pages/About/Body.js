@@ -10,7 +10,7 @@ class AboutBody extends Component {
                 </div>
                 <div className="row" id="content">
                     <div className="col-4">
-                        <img src="https://picsum.photos/260/300" alt="template"/>
+                        <div id="about-top-left"></div>
                     </div>
                     <div className="col-8 no-padding-bottom">
                         <p>
@@ -43,7 +43,7 @@ Fusce mollis ornare lorem vel euismod. Integer sit amet purus libero. Donec scel
                             and getting prepare for The Psychometric higher education entrance exam.
                             Finally, in 2013 I came to the south of israel to "make the desert bloom" and to study <b>Information
                             System Engineering</b> , which is a Bachelor of Science degree
-                            on behalf of Ben-Gurion University. During that time I've been exposed and learned the study
+                            on behalf of <b>Ben-Gurion University</b>. During that time I've been exposed and learned the study
                             of computer science, mathematics, statistics, economy, behavioural science, cyber security
                             and more.
                             At the 3rd year I worked as a <b>Technology Instructor </b>at Appleseeds Academy for

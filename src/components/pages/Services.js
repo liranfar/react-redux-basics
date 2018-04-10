@@ -1,17 +1,14 @@
 import React, {Component} from 'react';
-import {boxes, headerServices, newsletter} from "../../data/mock";
 import ServicesBody from "./Services/ServicesBody";
-import Header from "./common/Header";
-import Newsletter from "./common/Newsletter";
 import Footer from "./common/Footer";
-import Boxes from "./Home/Boxes";
 import Nav from "./common/Nav";
-
+import '../../style/services.css';
 class Services extends Component {
     render() {
         return (
             <div id="services">
                 <Nav selected="Services"/>
+                <ServicesBody/>
                 {/*<Boxes boxes={boxes} />*/}
                 <Footer/>
             </div>

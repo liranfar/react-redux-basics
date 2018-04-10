@@ -9,7 +9,7 @@ class Nav extends Component {
         /*TODO add facebook Linkedin*/
         return (
         <nav className="row">
-                    <div id="brand-name" className="col-6 col-s-12">
+                    <div id="brand-name" className="col-7 col-s-12">
                         <label>Liran Farage</label>
                     </div>
                     <div className="menu">
@@ -17,7 +17,7 @@ class Nav extends Component {
                            <Link to={process.env.PUBLIC_URL + '/'}> <li className={'col-1 col-s-12 ' + (selected === 'Home' ? 'current' : '')}>Home</li></Link>
                             <Link to={process.env.PUBLIC_URL + '/about'}><li className={'col-1 col-s-12 ' + (selected === 'About' ? 'current' : '')}>About</li></Link>
                             <Link to={process.env.PUBLIC_URL + '/resume'}><li className={'col-1 col-s-12 ' + (selected === 'Resume' ? 'current' : '')}>Resume</li></Link>
-                            <Link to={process.env.PUBLIC_URL + '/services'}><li className={'col-1 col-s-12 ' + (selected === 'Services' ? 'current' : '')}>Services</li></Link>
+                            {/*<Link to={process.env.PUBLIC_URL + '/services'}><li className={'col-1 col-s-12 ' + (selected === 'Services' ? 'current' : '')}>Services</li></Link>*/}
                             <Link to={process.env.PUBLIC_URL + '/tech'}><li className={'col-1 col-s-12 ' + (selected === 'Tech' ? 'current' : '')}>Technologies</li></Link>
                             <Link to={process.env.PUBLIC_URL + '/contact'}><li className={'col-1 col-s-12 ' + (selected === 'Contact' ? 'current' : '')}>Contact</li></Link>
                         </ul>
